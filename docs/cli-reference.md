@@ -28,19 +28,19 @@ Sample CLIs commands that you can use to try to learn about the toolset.
 
 ---
 ### Blueprint run tool
-    * `blueprint run -c apply -d -b ./examples/run/data/sample1.yaml -i ./examples/run/data/input_data1.yaml -w ./temp`
-      * pre-req: install terraform-config-inspect, and setup the environment $TERRAFORM_CONFIG_INSPECT_PATH.
-      * pre-req: install Terraform CLI.
-      * uses `./examples/run/data/sample1.yaml` as the blueprint configuration file.
-      * uses `./examples/run/data/input_data1.yaml` as the input data file for the blueprint configuration.
-      * `-d` will trigger a dry-run for the `blueprint apply` command.
-      * uses `./temp` as the working directory to generate the temporary terraform files (due to a dry-run) and run the Terraform Apply command.
-    * `blueprint run -c apply -b ./examples/run/data/sample1.yaml -i ./examples/run/data/input_data1.yaml -w ./temp`
-      * pre-req: install terraform-config-inspect, and setup the environment $TERRAFORM_CONFIG_INSPECT_PATH.
-      * pre-req: install Terraform CLI.
-      * uses `./examples/run/data/sample1.yaml` as the blueprint configuration file.
-      * uses `./examples/run/data/input_data1.yaml` as the input data file for the blueprint configuration.
-      * uses `./temp` as the working directory to download and run the Terraform Apply commands.
+  * `blueprint run -c apply -d -b ./examples/run/data/sample1.yaml -i ./examples/run/data/input_data1.yaml -w ./temp`
+    * pre-req: install terraform-config-inspect, and setup the environment $TERRAFORM_CONFIG_INSPECT_PATH.
+    * pre-req: install Terraform CLI.
+    * uses `./examples/run/data/sample1.yaml` as the blueprint configuration file.
+    * uses `./examples/run/data/input_data1.yaml` as the input data file for the blueprint configuration.
+    * `-d` will trigger a dry-run for the `blueprint apply` command.
+    * uses `./temp` as the working directory to generate the temporary terraform files (due to a dry-run) and run the Terraform Apply command.
+  * `blueprint run -c apply -b ./examples/run/data/sample1.yaml -i ./examples/run/data/input_data1.yaml -w ./temp`
+    * pre-req: install terraform-config-inspect, and setup the environment $TERRAFORM_CONFIG_INSPECT_PATH.
+    * pre-req: install Terraform CLI.
+    * uses `./examples/run/data/sample1.yaml` as the blueprint configuration file.
+    * uses `./examples/run/data/input_data1.yaml` as the input data file for the blueprint configuration.
+    * uses `./temp` as the working directory to download and run the Terraform Apply commands.
 
 ---
 ### Blueprint draw tool

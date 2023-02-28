@@ -77,9 +77,9 @@ class Module(dict):
 
     def __str__(self):
         txt = "Modules("
-        txt += "name:" + (self.name if hasattr(self, 'name') else 'None') + ", "
-        txt += "type:" + (self.module_type if hasattr(self, 'module_type') else 'None') + ", "
-        txt += "layer:" + (self.layer if hasattr(self, 'layer') else 'None') + ", "
+        txt += "name:" + str(self.name if hasattr(self, 'name') else 'None') + ", "
+        txt += "type:" + str(self.module_type if hasattr(self, 'module_type') else 'None') + ", "
+        txt += "layer:" + str(self.layer if hasattr(self, 'layer') else 'None') + ", "
         txt += "inputs:" + str(self.inputs if hasattr(self, 'inputs') else 'None') + ", "
         txt += "outputs:" + str(self.outputs if hasattr(self, 'outputs') else 'None') + ", "
         txt += "settings:" + str(self.settings if hasattr(self, 'settings') else 'None') + ", "

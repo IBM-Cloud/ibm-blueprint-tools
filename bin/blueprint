@@ -111,6 +111,10 @@ def main():
 
     # Execute the parse_args() method
     args = arg_parser.parse_args()
+    if not hasattr(args, 'log_level'):
+        print("Invalid blueprint CLI, try the following:")
+        print("blueprint -h")
+        exit(-1)
 
     if args.log_level == None:
         level = logging.WARNING
