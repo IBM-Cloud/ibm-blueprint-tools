@@ -136,7 +136,7 @@ class BlueprintMorphius:
                 git_source = src.GitSource(git_url, git_branch, git_token)
                 source = src.TemplateSource('github', git_source)
 
-                modules.append(module.Module(name, module_type, source))
+                modules.append(module.Module(name, type=module_type, source=source))
 
         except (KeyError, UnboundLocalError, TypeError) as e:
             logr.debug('Attribute error while reading & initializing modules from git_sources' + str(e))
@@ -167,6 +167,10 @@ class BlueprintMorphius:
         
         if bp.modules != None and len(bp.modules) > 0:
             for mod in bp.modules:
+                # if not 'git' in mod.source:
+                #     print(str(mod))
+                #     logr.warn('Git URL source is not found in  ' + mod.name)
+                #     continue
                 git_url = mod.source.git.git_repo_url
                 if hasattr(mod.source.git, 'git_token'):
                     git_token = mod.source.git.git_token

@@ -55,7 +55,7 @@ def main(argv):
     # bpr = bpconcile.BlueprintReconciler(bp)
     # bpr.reconcile()
 
-    (out_yaml_str, errors) = bpr.bp.to_yaml_str()
+    (out_yaml_str, errors) = bp.to_yaml_str()
     if output_blueprint_file == None or output_blueprint_file == '':
         print(out_yaml_str)
     else:
